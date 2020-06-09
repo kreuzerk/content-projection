@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'content-projection';
+  expanded = false;
+
+  toggleExpander(){
+    this.expanded = !this.expanded;
+  }
 }
