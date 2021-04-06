@@ -7,14 +7,12 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 })
 export class ClockComponent implements OnInit, OnDestroy {
 
-  currentTime;
-
-  constructor() { }
+  currentTime: string;
 
   ngOnInit(): void {
     console.log('Clock Component: NgOnInit called');
     const date = new Date();
-    this.currentTime = `${date.getHours()}:${date.getMinutes()}`;
+    this.currentTime = `${date.getHours()}:${date.getMinutes() < 10 ? '0' : ''}${date.getMinutes()}`;
   }
 
   ngOnDestroy(): void {
