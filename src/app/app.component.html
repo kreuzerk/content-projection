@@ -1,6 +1,21 @@
+<!--
 <button (click)="toggleExpander()">Toggle expander</button>
+-->
 
-<expander *ngIf="expanded" heading="Expand to see the current time">
-  <clock></clock>
+<expander heading="Expand to see the current time">
+    <clock></clock>
 </expander>
 
+<!--
+<expander heading="Expand to see the current time">
+  <ng-template>
+    <clock></clock>
+  </ng-template>
+</expander>
+-->
+
+<!--
+<ng-template #content>
+  <clock></clock>
+</ng-template>
+-->

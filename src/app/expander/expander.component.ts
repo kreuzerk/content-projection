@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, ContentChild, Input, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'expander',
@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core';
 export class ExpanderComponent {
 
   @Input() heading: string;
+  @ContentChild(TemplateRef) content: TemplateRef<any>;
   expanded = false;
 
   toggleExpand() {
